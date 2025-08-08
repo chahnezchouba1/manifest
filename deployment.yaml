@@ -17,4 +17,4 @@ spec:
       - name: underwriting-chatbot
         image: localhost:5000/underwriting_chatbot:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000
