@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: underwriting-chatbot
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: underwriting-chatbot
+  template:
+    metadata:
+      labels:
+        app: underwriting-chatbot
+    spec:
+      containers:
+      - name: underwriting-chatbot
+        image: localhost:5000/underwriting_chatbot:latest
+        ports:
+        - containerPort: 80
